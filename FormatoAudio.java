@@ -1,16 +1,30 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package gatuno;
 
 /**
  *
- * @author Jessica
+ * @author gdegenhardt
  */
 public interface FormatoAudio {
+    public void abrir(String arquivo);
+    public void reproduzir();
+    public void pausar();
+    public void parar();
+    public void avancar(int tempo);
+    public void retornar(int tempo);
+    public void liberar();
     
-   public void abrir (String formato);
-   public void reproduzir ();
-   public void pausar ();
-   public void parar ();
-   public void avancar (int formato);
-   public void retornar (int formato);
-   public void liberar ();
+    public default void reproduzirSimples(String arquivo){
+        abrir(arquivo);
+        reproduzir();
+    }  
     
+    public default void pararSimples(){
+        parar();
+        liberar();
+    }
 }
