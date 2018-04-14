@@ -9,7 +9,7 @@ public class FormatoAIFF implements FormatoAudio {
 
     @Override
     public void abrir(String arquivo) {
-        gatuno = new FormatoAIFF(arquivo);
+        gatuno = new AIFFSuperPlayer(arquivo);
         gatuno.setCursor(0);
     }
 
