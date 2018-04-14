@@ -9,7 +9,7 @@ public class FormatoWAV implements FormatoAudio {
 
     @Override
     public void abrir(String arquivo) {
-        gatuno = new FormatoWAV(arquivo);
+        gatuno = new WAVPlayer(arquivo);
         gatuno.reward(gatuno.forward(0));
     }
 
