@@ -2,14 +2,14 @@ package gatuno;
 
 import problema1.wmaPlay;
 
-public class wmaPlayFormatoAudio implements FormatoAudio {
+public class FormatoWMA implements FormatoAudio {
 
     wmaPlay reprodutor;
     private boolean parado = true;
 
     @Override
     public void abrir(String arquivo) {
-        reprodutor = new wmaPlay();
+        reprodutor = new FormatoWMA();
         reprodutor.setFile(arquivo);
         reprodutor.open();
         reprodutor.setLocation(0);
