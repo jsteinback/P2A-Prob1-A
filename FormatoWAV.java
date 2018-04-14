@@ -30,7 +30,6 @@ public class FormatoWAV implements FormatoAudio {
         parado = true;
         gatuno.stop();
         gatuno.reward(gatuno.forward(0));
-
     }
 
     @Override
