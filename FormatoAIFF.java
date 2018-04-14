@@ -16,20 +16,20 @@ public class FormatoAIFF implements FormatoAudio {
     @Override
     public void reproduzir() {
         gatuno.play();
-        parado = true;
+        parado = false;
     }
 
     @Override
     public void pausar() {
         gatuno.pause();
-        parado = false;
+        parado = true;
     }
 
     @Override
     public void parar() {
         gatuno.stop();
         gatuno.setCursor(0);
-        parado = false;
+        parado = true;
 
     }
 
@@ -38,9 +38,7 @@ public class FormatoAIFF implements FormatoAudio {
         if (parado) {
             int tempoAtual = gatuno.pause();
             gatuno.setCursor(tempoAtual + tempo);
-
         } else {
-
             int tempoAtual = gatuno.pause();
             gatuno.setCursor(tempoAtual + tempo);
             gatuno.play();
@@ -52,9 +50,7 @@ public class FormatoAIFF implements FormatoAudio {
         if (parado) {
             int tempoAtual = gatuno.pause();
             gatuno.setCursor(tempoAtual - tempo);
-
         } else {
-
             int tempoAtual = gatuno.pause();
             gatuno.setCursor(tempoAtual - tempo);
             gatuno.play();
