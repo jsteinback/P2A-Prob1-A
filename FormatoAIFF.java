@@ -2,14 +2,14 @@ package gatuno;
 
 import problema1.AIFFSuperPlayer;
 
-public class AIFFSuperPlayerFormatoAudio implements FormatoAudio {
+public class FormatoAIFF implements FormatoAudio {
 
     AIFFSuperPlayer gatuno;
     boolean parado = true;
 
     @Override
     public void abrir(String arquivo) {
-        gatuno = new AIFFSuperPlayer(arquivo);
+        gatuno = new FormatoAIFF(arquivo);
         gatuno.setCursor(0);
     }
 
