@@ -2,14 +2,14 @@ package gatuno;
 
 import problema1.WAVPlayer;
 
-public class WAVPlayerFormatoAudio implements FormatoAudio {
+public class FormatoWAV implements FormatoAudio {
 
     WAVPlayer gatuno;
     boolean parado = true;
 
     @Override
     public void abrir(String arquivo) {
-        gatuno = new WAVPlayer(arquivo);
+        gatuno = new FormatoWAV(arquivo);
         gatuno.reward(gatuno.forward(0));
     }
 
