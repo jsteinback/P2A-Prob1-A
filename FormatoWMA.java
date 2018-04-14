@@ -9,7 +9,7 @@ public class FormatoWMA implements FormatoAudio {
 
     @Override
     public void abrir(String arquivo) {
-        reprodutor = new FormatoWMA();
+        reprodutor = new wmaPlay();
         reprodutor.setFile(arquivo);
         reprodutor.open();
         reprodutor.setLocation(0);
