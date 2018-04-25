@@ -1,10 +1,13 @@
+Nome: Giulio Giovanella, Gabriel Ariel Degenhardt, J√©ssica Aline Steinback, Matheus Eduardo Valle.
+
+
 Adapter utilizado nas classes: FormatoAAC, FormatoAIFF, FormatoMP3, FormatoWAV, FormatoWMA, que adaptam para agirem como um FormatoAudio. 
 Target: FormatoAudio
 Adaptee: AIFFSuperPlayer; WAVPlayer; wmaplay, MP3DJ,AACPlayer
 
-FactoryMethod, f·brica para retornar uma inst‚ncia de um FormatoAudio conforme a extenÁ„o do arquivo
-F·brica - FactoryFormatoAudio
+FactoryMethod, f√°brica para retornar uma inst√¢ncia de um FormatoAudio conforme a exten√ß√£o do arquivo
+F√°brica - FactoryFormatoAudio
 Produto - FormatoAudio
 Produto concreto - FormatoAAC, FormatoAIFF, FormatoMP3, FormatoWAV, FormatoWMA
 
-FaÁade - Respons·vel pelas funcionalidades reproduzirSimples e pararSimples, provendo uma maneira simples de utilizar as classes desenvolvidas. 
+Fa√ßade - Respons√°vel pelas funcionalidades reproduzirSimples e pararSimples, provendo uma maneira simples de utilizar as classes desenvolvidas. 
