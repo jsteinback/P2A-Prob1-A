@@ -1,42 +1,66 @@
-/**
- *
- * @author Jessica
- */
+package gatuno;
+
+import problema1.AIFFSuperPlayer;
+
 public class FormatoAIFF implements FormatoAudio {
 
+    AIFFSuperPlayer gatuno;
+    boolean parado = true;
+
     @Override
-    public void abrir(String formato) {
-        
+    public void abrir(String arquivo) {
+        gatuno = new AIFFSuperPlayer(arquivo);
+        gatuno.setCursor(0);
     }
 
     @Override
     public void reproduzir() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        gatuno.play();
+        parado = false;
     }
 
     @Override
     public void pausar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        gatuno.pause();
+        parado = true;
     }
 
     @Override
     public void parar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        gatuno.stop();
+        gatuno.setCursor(0);
+        parado = true;
+
     }
 
     @Override
-    public void avancar(int formato) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void avancar(int tempo) {
+        if (parado) {
+            int tempoAtual = gatuno.pause();
+            gatuno.setCursor(tempoAtual + tempo);
+        } else {
+            int tempoAtual = gatuno.pause();
+            gatuno.setCursor(tempoAtual + tempo);
+            gatuno.play();
+        }
     }
 
     @Override
-    public void retornar(int formato) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void retornar(int tempo) {
+        if (parado) {
+            int tempoAtual = gatuno.pause();
+            gatuno.setCursor(tempoAtual - tempo);
+        } else {
+            int tempoAtual = gatuno.pause();
+            gatuno.setCursor(tempoAtual - tempo);
+            gatuno.play();
+        }
     }
 
     @Override
     public void liberar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        gatuno.release();
+        parado=true;
     }
-    
+
 }
