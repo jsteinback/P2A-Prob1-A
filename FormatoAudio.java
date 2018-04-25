@@ -18,13 +18,4 @@ public interface FormatoAudio {
     public void retornar(int tempo);
     public void liberar();
     
-    public default void reproduzirSimples(String arquivo){
-        abrir(arquivo);
-        reproduzir();
-    }  
-    
-    public default void pararSimples(){
-        parar();
-        liberar();
-    }
 }
