@@ -1,0 +1,10 @@
+Adapter utilizado nas classes: FormatoAAC, FormatoAIFF, FormatoMP3, FormatoWAV, FormatoWMA, que adaptam para agirem como um FormatoAudio. 
+Target: FormatoAudio
+Adaptee: AIFFSuperPlayer; WAVPlayer; wmaplay, MP3DJ,AACPlayer
+
+FactoryMethod, fábrica para retornar uma instância de um FormatoAudio conforme a extenção do arquivo
+Fábrica - FactoryFormatoAudio
+Produto - FormatoAudio
+Produto concreto - FormatoAAC, FormatoAIFF, FormatoMP3, FormatoWAV, FormatoWMA
+
+Façade - Responsável pelas funcionalidades reproduzirSimples e pararSimples, provendo uma maneira simples de utilizar as classes desenvolvidas. 
