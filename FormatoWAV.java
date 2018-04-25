@@ -57,7 +57,7 @@ public class FormatoWAV implements FormatoAudio {
     @Override
     public void liberar() {
         parado = true;
-        gatuno.stop();
+        //gatuno.stop();
         gatuno = null;
     }
 
